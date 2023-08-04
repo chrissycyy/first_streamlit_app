@@ -37,7 +37,6 @@ try:
   else:
       back_from_function = get_fruityvice_data(fruit_choice)
       streamlit.dataframe(back_from_function)
-
 except URLError as e:
     streamlit.error()
 
@@ -56,7 +55,7 @@ if streamlit.button('Get Fruit Load List'):
     streamlit.dataframe(my_data_rows)
 
 #don't run anything past here while we troubleshoot
-# streamlit.stop()
+streamlit.stop()
 
 # Allow the end user to add a fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
